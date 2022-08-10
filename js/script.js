@@ -1,3 +1,8 @@
+
+
+
+
+
 // Floor tabs
 function floorsTabs() {
   let tabsButton = document.querySelectorAll('.floors__btn');
