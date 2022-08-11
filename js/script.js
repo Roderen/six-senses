@@ -1,5 +1,85 @@
-var controller = new ScrollMagic.Controller();
+// popup
+const body = document.body;
+const popup = document.querySelectorAll('.popup');
+const popupInner = document.querySelectorAll('.popup-inner');
+const popupClose = document.querySelectorAll('.popup-close');
 
+const popupConsultationBtn = document.querySelector('.popup-consultation-btn');
+const popupBrochureBtn = document.querySelector('.popup-brochure-btn');
+const popupAboutBtn = document.querySelector('.popup-about-btn');
+const popupDownload = document.querySelectorAll('.floors__block-download');
+
+const popupConsultation = document.querySelector('.popup-consultation');
+const popupBrochure = document.querySelector('.popup-brochure');
+const popupFloor = document.querySelector('.popup-floor');
+
+popupClose.forEach(popClose => {
+  popClose.addEventListener('click', () => {
+    popup.forEach(popupItem => {
+      popupItem.classList.remove('popup-active');
+    })
+
+    body.style.overflow = 'initial';
+  })
+})
+
+popupConsultationBtn.addEventListener('click', () => {
+  popupConsultation.classList.add('popup-active');
+  body.style.overflow = 'hidden';
+})
+
+popupBrochureBtn.addEventListener('click', () => {
+  popupBrochure.classList.add('popup-active');
+  body.style.overflow = 'hidden';
+})
+
+popupAboutBtn.addEventListener('click', () => {
+  popupConsultation.classList.add('popup-active');
+  body.style.overflow = 'hidden';
+})
+
+popupDownload.forEach(item => {
+  item.addEventListener('click', () => {
+    popupFloor.classList.add('popup-active');
+    body.style.overflow = 'hidden';
+  })
+})
+
+
+
+// Ajax form
+$(function () {
+  $('form').submit(function (e) {
+    var $form = $(this);
+
+    let name = $('#your-name').val(),
+      phone = $('#your-phone').val(),
+      email = $('#your-email').val();
+      select = $('#popup-select').val();
+
+    $.ajax({
+      type: $form.attr('method'),
+      url: $form.attr('action'),
+      data: { name: name, phone: phone, email: email },
+      success: (function () {
+        // 
+      }),
+      error: (function () {
+        // 
+      })
+    })
+
+      e.preventDefault();
+  });
+});
+
+
+
+
+
+
+// Scroll magic. Animation for lines
+var controller = new ScrollMagic.Controller();
 $(".trigger-line").each(function () {
   var tl = new TimelineMax();
   var child = $(this).find(".all-line");
@@ -22,15 +102,22 @@ $(".trigger-line").each(function () {
 
 
 
+// Fancybox gallery
+Fancybox.bind('[data-fancybox]', {
+
+});
+
+
+
 
 
 
 // Floor tabs
 function floorsTabs() {
-  let tabsButton = document.querySelectorAll('.floors__btn');
-  let tabsBlock = document.querySelectorAll('.floors__block');
+  var tabsButton = document.querySelectorAll('.floors__btn');
+  var tabsBlock = document.querySelectorAll('.floors__block');
 
-  let counter = 0;
+  var counter = 0;
 
   tabsButton.forEach((btn, index) => {
     btn.addEventListener('click', () => {
@@ -65,3 +152,16 @@ function floorsTabs() {
   updateActiveElements()
 }
 floorsTabs()
+
+
+
+
+const limitNumber = e => {
+  const value = e.value;
+  e.value = value.replace(/[A-Za-zА-Яа-яЁё]/g, '');
+}
+
+const limitEmail = e => {
+  const value = e.value;
+  e.value = value.replace(/[А-Яа-яЁё]/g, '');
+}
