@@ -184,7 +184,7 @@ body {
   align-items: flex-end;
 }
 
-.intro__brands-img img:first-child {
+.intro__brands-img picture:first-child {
   margin-right: 30px;
 }
 
@@ -301,7 +301,7 @@ body {
   font-weight: 600;
 }
 
-.intro__brochure-img img:first-child {
+.intro__brochure-img picture:first-child {
   position: absolute;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -311,7 +311,7 @@ body {
   transition: 0.3s;
 }
 
-.intro__brochure-img:hover.intro__brochure-img img:first-child {
+.intro__brochure-img:hover.intro__brochure-img picture:first-child {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -501,11 +501,11 @@ body {
   height: 1px;
   background-color: #8c8c8c;
   margin-top: 15px;
-  margin-left: -70px;
+  margin-left: -60px;
 }
 
-.about__payment-line:last-child {
-  margin-left: -20px;
+.about__info-location .about__payment-line:nth-child(6) {
+  margin-left: -10px;
 }
 
 .about__payment-info:nth-child(1) {
@@ -794,6 +794,12 @@ body {
   padding: 0 40px;
 }
 
+.floor__btn-line {
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+}
+
 .floors__title {
   font-family: 'Ubuntu';
   color: #080300;
@@ -968,7 +974,7 @@ body {
   height: 670px;
 }
 
-.gallery__big-img img {
+.gallery__big-img picture {
   width: 100%;
   height: 100%;
 }
@@ -987,7 +993,7 @@ body {
   flex-direction: column;
 }
 
-.gallery__small-img img {
+.gallery__small-img picture {
   width: 100%;
   height: 50%;
   -o-object-fit: cover;
@@ -1147,7 +1153,7 @@ body {
   display: flex;
 }
 
-.hotel img {
+.hotel picture {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1274,7 +1280,7 @@ footer {
   justify-content: space-around;
 }
 
-.footer__brands img:nth-child(3) {
+.footer__brands picture:nth-child(3) {
   margin-top: 30px;
 }
 
@@ -1360,7 +1366,7 @@ footer {
     display: flex;
   }
 
-  .intro__brochure-img img {
+  .intro__brochure-img picture {
     width: 90%;
     -o-object-fit: contain;
     object-fit: contain;
@@ -1437,7 +1443,7 @@ footer {
     justify-content: flex-end;
   }
 
-  .intro__brochure-img img {
+  .intro__brochure-img picture {
     width: 100%;
   }
 
@@ -1660,7 +1666,7 @@ footer {
     flex-direction: row;
   }
 
-  .gallery__small-img img {
+  .gallery__small-img picture {
     width: 50%;
     height: initial;
   }
@@ -1883,7 +1889,7 @@ footer {
     font-size: 12px;
   }
 
-  .location__card-img img {
+  .location__card-img picture {
     width: 100%;
   }
 
@@ -1923,7 +1929,7 @@ footer {
     left: 5px;
   }
 
-  .location__comments-image img {
+  .location__comments-image picture {
     width: 100%;
   }
 
@@ -2049,7 +2055,7 @@ footer {
     width: 100%;
   }
 
-  .location__card-img img {
+  .location__card-img picture {
     height: 100%;
   }
 
@@ -2107,4 +2113,8 @@ footer {
   .floors__title {
     font-size: 32px;
   }
+}
+
+.img-trigger1 {
+  position: absolute;
 }

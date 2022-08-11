@@ -1,3 +1,25 @@
+var controller = new ScrollMagic.Controller();
+
+$(".trigger-line").each(function () {
+  var tl = new TimelineMax();
+  var child = $(this).find(".all-line");
+  tl.to(child, 1, { height: 200, ease: Linear.easeNone });
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0.4,
+    duration: "100%"
+  })
+    .setTween(tl)
+    // .addIndicators({
+    //   colorTrigger: "black",
+    //   colorStart: "black",
+    //   colorEnd: "black",
+    //   indent: 10
+    // })
+    .addTo(controller);
+});
+
 
 
 
