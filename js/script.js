@@ -1,3 +1,33 @@
+// Ajax form
+// $(function () {
+//   $('form').submit(function (e) {
+//     var $form = $(this);
+
+//     let name = $('#popup-name').val(),
+//       phone = $('#popup-phone').val(),
+//       email = $('#popup-email').val();
+//       select = $('#popup-select').val();
+
+//     $.ajax({
+//       type: $form.attr('method'),
+//       url: $form.attr('action'),
+//       data: { name: name, phone: phone, email: email },
+//       success: (function () {
+//         // 
+//       }),
+//       error: (function () {
+//         // 
+//       })
+//     })
+
+//       e.preventDefault();
+//   });
+// });
+
+
+
+
+
 // popup
 const body = document.body;
 const popup = document.querySelectorAll('.popup');
@@ -44,34 +74,6 @@ popupDownload.forEach(item => {
     body.style.overflow = 'hidden';
   })
 })
-
-
-
-// Ajax form
-$(function () {
-  $('form').submit(function (e) {
-    var $form = $(this);
-
-    let name = $('#your-name').val(),
-      phone = $('#your-phone').val(),
-      email = $('#your-email').val();
-      select = $('#popup-select').val();
-
-    $.ajax({
-      type: $form.attr('method'),
-      url: $form.attr('action'),
-      data: { name: name, phone: phone, email: email },
-      success: (function () {
-        // 
-      }),
-      error: (function () {
-        // 
-      })
-    })
-
-      e.preventDefault();
-  });
-});
 
 
 
