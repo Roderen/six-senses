@@ -104,7 +104,7 @@ body {
 
 /* Intro start */
 .section-intro {
-  background-image: url('../img/intro/bg.jpeg');
+  background-image: url('../img/intro/bg.webp');
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -541,7 +541,7 @@ body {
 /* Location start */
 .section-location {
   margin-top: 185px;
-  background-image: url('../img/location/bg.jpeg');
+  background-image: url('../img/location/bg.webp');
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -1167,7 +1167,7 @@ body {
 
 /* Footer start */
 footer {
-  background-image: url('../img/footer/bg.jpeg');
+  background-image: url('../img/footer/bg.webp');
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
