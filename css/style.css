@@ -974,7 +974,7 @@ body {
   height: 670px;
 }
 
-.gallery__big-img picture {
+.gallery__big-img picture img {
   width: 100%;
   height: 100%;
 }
@@ -994,8 +994,12 @@ body {
 }
 
 .gallery__small-img picture {
-  width: 100%;
   height: 50%;
+}
+
+.gallery__small-img picture img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1155,6 +1159,11 @@ body {
 
 .hotel picture {
   width: 100%;
+}
+
+.hotel picture img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
